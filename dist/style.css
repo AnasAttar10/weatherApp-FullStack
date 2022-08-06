@@ -1,0 +1,71 @@
+
+body{
+    font-family: 'Uchen', serif;
+}
+.user-enter{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+#cityNameInput{
+    padding: 10px;
+    font-size: 18px;
+}
+#searchBtn{
+    color: green;
+    cursor: pointer;
+}
+.city-container{
+    background-color: #3395D7;
+    color: white;
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 2px solid gray;
+}
+.icon{
+    cursor: pointer;
+    display: none;
+    font-size: 18px;
+}
+.active{
+    display: block;
+}
+#saveCity{
+    color: #3D555C;  
+}
+#removeCity{
+    color: #902D41;
+}
+#updateCity{
+    padding: 10px;
+    background-color: black;
+    cursor: pointer;
+}
+.temperature{
+    font-size: 40px;
+    margin: 0;
+}
+.container-icon{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.container-icon > button{
+    background: none;
+    color: white;
+    border: none;
+}
+img{
+    height: 100%;
+    padding: 0px;
+}
+.image-container{
+    height: 80px;
+    margin: 0;
+}
+
+
+
