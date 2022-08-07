@@ -32,7 +32,6 @@ router.get("/city/:cityName", (req, res) => {
 
 router.post("/city", (req, res) => {
   let cityObject = { ...req.body };
-  console.log(cityObject);
   let c1 = new Cities(cityObject);
   c1.save();
   res.send(c1);
@@ -43,20 +42,21 @@ router.put("/city/:cityName", (req, res) => {
   urllib.request(`${API_EXTERNAL}${cityName}`, (err, data, _res) => {
     if (err) throw err;
     let result = loadCityWeather(JSON.parse(data));
-    // console.log(result);
     Cities.findOneAndUpdate(
       { name: cityName },
       {
-        $set: {
-          name: result.name,
-          temperature: result.temperature,
-          condition: result.condition,
-          conditionIcon: result.conditionIcon,
-        },
+        name: result.name,
+        temperature: result.temperature,
+        condition: result.condition,
+        conditionIcon: result.conditionIcon,
+      },
+      {
+        new: true,
+      },
+      function (err, result) {
+        res.send(result);
       }
     );
-
-    res.send(result);
   });
 });
 router.delete("/city/:cityName", (req, res) => {

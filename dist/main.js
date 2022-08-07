@@ -39,7 +39,7 @@ $("#cities-container").on("click", "#removeCity", function () {
 $("#cities-container").on("click", "#updateCity", function () {
   let cityName = $(this).closest(".city-container").find("#cityName").text();
   tempManager.updateCity(cityName);
-  // let cities = tempManager.cityData;
-  // render.render(cities);
+  let cities = tempManager.cityData;
+  render.render(cities);
   loadPage();
 });

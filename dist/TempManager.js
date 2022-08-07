@@ -48,8 +48,7 @@ class TempManager {
       url: `/city/${cityName}`,
       type: "put",
       success: function (data) {
-        // console.log(`update ${data.name} Item `);
-        console.log(data);
+        console.log(`update ${data.name} Item `);
       },
     });
   };

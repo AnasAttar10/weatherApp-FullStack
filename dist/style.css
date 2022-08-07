@@ -41,8 +41,7 @@ body{
 }
 #updateCity{
     padding: 10px;
-    background-color: black;
-    cursor: pointer;
+    color: black;
 }
 .temperature{
     font-size: 40px;
